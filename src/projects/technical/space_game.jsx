@@ -58,7 +58,7 @@ function TechnicalSpaceGame() {
         </p>
         <br />
         <p className="max-w-170">
-          To remove only completely unused vertices, a reference counting system is used. Removing a vertex outright would be inefficient, as it would require shifting all vertices to the right (or swapping with the last vertex), which is costly and would mess up the face indices.
+          To remove only completely unused vertices, a reference counting system is used. Removing a vertex outright would be inefficient, as it would require shifting all vertices after it to the left (or swapping with the last vertex), which is costly and would mess up the face indices.
           For this reason, unused vertices are just marked as removed and their positions are set to zero.
           When a new vertex is created, the system first checks the list of empty spots before expanding the vertex list.
         </p>
